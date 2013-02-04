@@ -1,0 +1,74 @@
+/*  Laying out tests
+ */
+digraph test1 {
+	/*
+	graph [layout=dot]
+	compound=true;
+	 */
+	node [shape=box]
+	edge [penwidth=2.2 arrowsize=1.8 labelfontsize=7.0]
+	 /* color="green4:blue" dir=both // rather than make this both, will make two edges
+      */
+
+	/*
+	 * Instead of record types, going to try the more
+	 *  flexible & general HTML "shape"
+         */
+	/*
+	subgraph cluster_Browser {label="Browsers; labelloc=t; browser}
+	browser [shape=record, label="{-\ Firefox|-\ Chrome}"]
+	*/
+	browser [ label=< <table border="0" cellborder='0'>
+		<tr><td> </td></tr>
+		<tr><td>
+			<br align="left"/>  <b>Browser</b>
+			<br align="left"/>      - Firefox
+			<br align="left"/>      - Chrome (soon?)
+		</td></tr>
+		<tr><td> </td></tr>
+		<tr><td> </td></tr>
+	</table> >];
+	scrape [ label=< <table border="0" cellborder='0'>
+		<tr><td> </td></tr>
+		<tr><td> </td></tr>
+		<tr><td>
+			<br/><b>[S]crape</b>
+			<br/><i>command procressor</i>
+		</td></tr>
+		<tr><td> </td></tr>
+		<tr><td> </td></tr>
+	</table> >];
+	files [ shape=box3d label=< <table border="0" cellborder='0'>
+		<tr><td> </td></tr>
+		<tr><td>
+			<br align="left"/>  <b>Files</b>
+			<br align="left"/>    - run scripts (*.scrape)
+			<br align="left"/>    - output (csv tables)
+			<br align="left"/>    - plugins (./_scrape/plugins)
+		</td></tr>
+		<tr><td> </td></tr>
+	</table> >];
+	// Use this pattern if you want to include an image;
+	// - not sure how to control its size
+	// scrape [label="", shape=box, shapefile="scrape_logo2.png"]
+	// want these on top
+	{ rank=same; browser files; }
+	browser -> scrape [ color=green4 label=< <table border="0" cellborder='0'>
+							<tr><td align="left">
+								<br align="left"/>Use browser interactively with <b>[S]crape</b>;
+								<br align="left"/><b>[S]crape</b> starts and controls browser;
+								<br align="left"/><b>[S]crape</b> scrapes from the browser;
+							</td></tr>
+						</table> >];
+
+	
+	files -> scrape [ color=green4 label=< <table border="0" cellborder='0'>
+						<tr><td align="left">
+							<br align="left"/>- Batch;
+							<br align="left"/>- Interactive;
+						</td></tr>
+					</table> >];
+
+	scrape -> files [ color=blue ]
+	scrape -> browser [ color=blue ]
+}
