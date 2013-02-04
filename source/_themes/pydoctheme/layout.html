@@ -89,6 +89,11 @@
             {%- include "searchbox.html" %}
             {%- endblock %}
           {%- endif %}
+	  {%- if on_rtd %}
+	    <h5>Built on readthedocs.org</h5>
+	  {%- else %}
+	    <h5>built elsewhere...</h5>
+	  {%- endif %}
         </div>
       </div>
       {%- endif %}

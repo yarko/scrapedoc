@@ -189,6 +189,7 @@ htmlhelp_basename = 'Scrapedoc'
 
 if on_rtd:
     html_context = {
+       "on_rdt" : on_rtd,
        "google_analytics_id" : 'UA-38195735-1',
        "disqus_shortname" : 'scrapedoc',
        "github_base_account" : 'yarko',
