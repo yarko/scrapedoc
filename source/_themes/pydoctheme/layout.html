@@ -89,11 +89,9 @@
             {%- include "searchbox.html" %}
             {%- endblock %}
           {%- endif %}
-	  {%- if on_rtd == True %}
-	    <h5>Built on readthedocs.org</h5>
-	  {%- else %}
-	    <h5>built elsewhere...</h5>
-	  {%- endif %}
+	  {% if github_base_account -%}
+	    {%- include "editthis.html" -%}
+	  {%- endif -%}
         </div>
       </div>
       {%- endif %}
@@ -212,6 +210,9 @@
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
+    {%- if on_rtd -%}
+    <br> Built by <a html="https://readthedocs.org">ReadTheDocs.org</a>
+    {%- endif -%}
     </div>
 {%- endblock %}
   </body>

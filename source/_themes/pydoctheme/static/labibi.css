@@ -12,9 +12,19 @@
     background: #DDE7EC;
      */
     background: #FFF5F5;
-    position: fixed;
-    bottom: 1em;
-    left: 1em;
+    /* On iOS, iPhone, this results
+     * in this _always_ being on the
+     * viewport of the screen, impeding
+     * usual reading (the rtfd item
+     * is already hogging that space):
+     * => let's see if putting this inside the sidebar div helps;
+     *
+     position: fixed;
+     */
+
+    position: relative;
+    bottom: -1em;
+    left: -1em;
     font-size: 67%;
     text-align: left;
     z-index: 2;
