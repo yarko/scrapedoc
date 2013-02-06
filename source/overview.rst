@@ -53,7 +53,7 @@ in the browser and scrape will give you
 unambiguous code to select that data.
 As with a *Google* search,
 skill will help make the search term (xpath or css selector)
-more general, yet sepecific enough to return your desired result.
+more general, yet specific enough to return your desired result.
 
 Inspect results as you work
 interactively until you 
@@ -73,12 +73,12 @@ You should have a general understanding of *HTML* and *CSS* structure
 and form.  You don't need to know much, but you should
 be able to understand and recognize what you are looking at
 when looking at small portions of web page source, and have
-an understandging of what type of thing you are trying to extract,
+an understanding of what type of thing you are trying to extract,
 i.e. path, attribute, or text.
 
 You will need some basic understanding of XPATH_ syntax and `CSS Selectors`_
-as you will be using these to descrivbe what you are looking for.
-When manually highliting something in your browser,
+as you will be using these to describe what you are looking for.
+When manually highlighting something in your browser,
 |s| will return an *XPATH*.  Often  a *CSS selector* is both shorter
 and more accurately selective.   |S| allows you to view context near
 your selection.  This makes it easy to pick a different form of selector
@@ -95,13 +95,13 @@ and test it before saving it to your script.
 
 In interactive use, |s| is similar to a typical command shell,
 such as ``sh`` or ``bash``, or ``cmd`` on Windows.
-In command interpreters, there are typically builtin commands
+In command interpreters, there are typically built-in commands
 and a way to execute external commands.
 Shells also provide variables, and some sort of program control.
 
-|SP| has a rich set of builtin commands, and allows callig
+|SP| has a rich set of built-in commands, and allows callig
 external commands through your system's shell.
-You can also add builtin commands
+You can also add built-in commands
 by writing extensions in Python.
 
 Since |s| outputs tables [#tables]_, variable names are table column
@@ -116,7 +116,7 @@ There are other important kinds of variables in |s|.
          These are used for intermediate results.  Local variables
          have scope per output table.
 
-:global: These variables persist accross output table
+:global: These variables persist across output table
          changes.
 
 
