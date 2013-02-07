@@ -8,7 +8,7 @@
 .. include:: __scrape_logo.rst
 
 =========================
-|Shdr| - the Documention
+|Shdr| - the Documentation
 =========================
 
 
@@ -18,7 +18,7 @@ selective data from web publications.
 It is particularly useful for serial web publications
 which have similar structure over many issues.
 You interactively develop a selection and extraction
-set of commands, and run them accross a series of
+set of commands, and run them across a series of
 issues, generating output (JSON or CSV).
 
 Contents:
