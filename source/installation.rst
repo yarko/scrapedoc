@@ -30,7 +30,7 @@ Alternatively, you may be able to install just the command-line tools
 (see https://github.com/kennethreitz/osx-gcc-installer - we have not tried this).
 
 For Windows platforms, this is not a straightforward process.
-See http://lxml.de/installation.html.
+See the ``MS Windows`` section at http://lxml.de/installation.html.
 
 
 .. _Mac App Store: https://itunes.apple.com/us/app/xcode/id497799835

@@ -18,24 +18,21 @@ Getting Started
 
 .. |jama| replace:: *JAMA*
 
-
-We'll start by making sure you have |s| installed.
-
-Activate_ the virtual environment you have installed |s|.
-
-
 .. _Activate: https://pypi.python.org/pypi/virtualenv
 
 
-Now run ``scrape``::
+We'll start by making sure you have |s| installed.
+
+Activate_ the virtual environment where you have installed |s|,
+and run ``scrape``::
 
   $ scrape http://scrape.readthedocs.org
 
-This should start |s| and open its documentation.
+This should start |s| and open its documentation in Firefox.
 
  - your Firefox should have "WebDriver" displayed in the lower-right;
 
-   - this indicates that this Firefox can be controlled from |s|.
+   - this indicates that this Firefox is being controlled from |s|.
 
  - you should see a log of the plugins registered (scrape comes distributed with one - ``affiliations``);
 
@@ -68,8 +65,7 @@ The general starategy for using |s| is:
   - capture the desired information;
   - repeat as desired;
   - save a table (a set of variables) to a file;
-
-To develop a script, we save select commands.
+  - lastly, save your interactive commands to a script to run later.
 
 Let's save the headers to develop an outline for this page.
 
@@ -84,17 +80,17 @@ The variable does not need to exist (it will be created). ::
 Should you decide to save the output, it will be saved in a file ``outline.csv``.
 So far, this table has one column - one variable.
 
-|S| starts by providing a simplified interface to the libxml2 library,
+One thing |s| does is provide a simplified interface to the libxml2 library,
 so that most of the information you will find about ``xpath`` selectors
-and ``cssselectors`` will work as you expect in |s|.
-Additionally, scrape combines and extends these tools
+and ``cssselectors`` will work as you expect.
+|S| also combines, extends and adds to these tools
 for interactive use.
 For example, ``find_by_text`` will search
 nodes selected by an xpath expression for a string.
 
-You may want to
+You might like to
 open http://www.w3schools.com/xpath/xpath_syntax.asp in another browser
-window for reference.
+window for reference during this tutorial.
 
 Let's find the subheadings on our target page to see if this
 will satisfy our needs for a page outline::
@@ -106,9 +102,9 @@ This should find all the ``<H2>`` nodes under the current node.
 More than one node is found - ``show`` displays all of them.
 
 The text of these nodes seems like it would serve nicely as an outline, so lets capture those.
-To see what the various variables of a table currently have, we ``show out``,
-which shows pending output (the current table's contents).
-The form of the display is *YAML*.
+To see what the various variables of a table currently have,
+we issue the ``show out`` command
+to show pending output (the current table's contents).
 |S| variables are lists of values.
 Varible names are shown with a colon (``my_var:``),
 and their values are shown preceded by a '-'.
@@ -123,32 +119,62 @@ selected ``HTML`` nodes into the current variable.
 
 
 There was no output pending prior to the ``text`` command.
-If you wanted to save this now, the ``table`` command (without a name)
-will output the current table name to a ``csv`` table (if one already exsits,
-it will not be overridden; the name will be numberically extended).
+If you wanted to save this now, the ``table`` command (with no argument)
+will output the current table to a ``csv`` file with the same name
+(if one already exsits, it will not be overwritten;
+the name will be numerically extended).
 
-If you wanted to continue extending your script later, look
+If you want to save your script for later, look
 at your history.
-Only scrape commands which act on pages are saved to history.
-You can choose which parts of history you save.
+Only scrape commands which act on pages are saved in history.
+You can choose which parts of history you save to a script file.
 ::
 
   [S]crape >>> history
   [S]crape >>> help save
 
-If you'd like, you can save your script now.
-To exit |s|, see ``help EOF``.
-
-You can edit the scripts outside of |s| with a text editor.
+If you'd like, save your script now.
+You can edit saved |s| scripts with a text editor.
 You can add comments, which begin with '#' and extend to the end of the line.
 
-Now might be a good time to select a more detailed tutorial.
+There is an alternate form for selecting tables and variables,
+which may help to the commands in your script (and what they apply to)
+stand out.   If you'd like, in place of::
 
-Have fun |is| ing!
+   table outline
+   var topics
+
+you can equivalently write::
+
+    [ outline ]
+    < topics >
+
+To exit |s|, see ``help EOF``.
+
+After our brief interactive session with |s|, here's what our script looks like::
+
+   ##
+   # [S]crape script to get outline of a page
+   #
+   # - gets the text of <h2> headings;
+   #
+   [ outline ]
+   < topics >
+   findall .//h2
+   text
+   table   # save outline.csv
+
+
+That's all there is to it!
+
+Please consider continuing to a more detailed tutorial.
+
+Happy |is| ing!
 
 
 ----
 
-.. [#]  You can also start at the root of the document - see ``help doc`` and ``help body``.
+.. [#]  You can easily point to the root of the document at any time - see
+       ``help doc`` and ``help body``.
 
 .. [#] Be sure you've installed |s| and a current Firefox browser.
