@@ -142,7 +142,7 @@ You can edit saved |s| scripts with a text editor.
 You can add comments, which begin with '#' and extend to the end of the line.
 
 There is an alternate form for selecting tables and variables,
-which may help to the commands in your script (and what they apply to)
+which may help the commands in your script (and what they apply to)
 stand out.   If you'd like, in place of::
 
    table outline
