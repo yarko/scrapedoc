@@ -3,3 +3,4 @@
 build/
 foo.*
 *.foo
+*.swp

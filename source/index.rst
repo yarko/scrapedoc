@@ -30,8 +30,9 @@ Contents:
 
    overview
    installation
-   tutorial
+   tutorials/intro
    LICENSE
+
 
 :doc:`overview`
    What's involved, required knowledge,  and the basic modes of operation.
@@ -39,12 +40,13 @@ Contents:
 :doc:`installation`
    Software and browser requirements.
 
-:doc:`tutorial/index`
+:doc:`tutorials/intro`
    Get started with a concrete examples (with exercises).
 
 
 :doc:`LICENSE`
   This license applies to the program, |iS|, and its documentation.
+
 
 Alternatives
 ============

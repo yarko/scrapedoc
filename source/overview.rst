@@ -18,8 +18,8 @@ Context
    :alt: [S]crape Context
 
    digraph g {
-     graph [nodesep=0.7, margin="0.6,0.15"];
-     edge [dir=both];
+     graph [nodesep="0.7", margin="0.6,0.15"];
+     edge [dir="both"];
      node [fontname="verdana", shape=box, fillcolor=snow, style="rounded,filled"];
 
      subgraph {
@@ -30,12 +30,11 @@ Context
      shell -> "[S]crape";
 
      scripts -> "[S]crape";
+     "[S]crape" -> plugins [dir=back];
 
-     edge [dir=forward];
-     plugins -> "[S]crape";
-     "[S]crape" -> output;
-
+     "[S]crape" -> output [dir=forward];
    }
+
 
 Modes of Operation
 -------------------
@@ -149,46 +148,6 @@ The remaining commands deal with interactive use (history, view variables, run
 scripts, save or load scripts), and outputing results (tables).
 
 
-Installing |iSP|
-----------------
-
-Now that you have a good overview, let's show how to develop and
-run a useful |s| script.
-
-First, be sure you have python_ 2.7 installed for your platform.
-Also, be sure you have installed a recent version of Firefox_ [#browsers]_.
-
-.. _python: http://python.org/download/releases/2.7.3/
-
-.. _Firefox: http://www.mozilla.org/firefox
-
-Next, ensure you have ``pip`` installed::
-
-  $ which pip
-
-If you don't have pip installed, then install it::
-
-  $ easy_install pip
-
-If you do have pip, be sure it's up-to-date::
-
-  $ pip install -U pip
-
-
-Now, install the current version of |s|::
-
-  $ pip install ./downloads/scrape.gz
-
-(use the path where you've saved `scrape.gz <./scrape.gz>`_).
-Alternately, you can install directly from this website::
-
-  $ pip install http://this_current_scrape_URL/scrape.gz
-
-
-.. todo::
-   Have yet to create the scrape.gz install file.
-
-
 -----
 
 .. [#] |S| uses a Selenium_ Client Driver to run your browser.
@@ -204,16 +163,4 @@ Alternately, you can install directly from this website::
              as JSON.
              Then, you could rebuild, re-shape your tables from your stored data source.
              This may be a worthy modification for a future version.
-
-.. [#browsers] Firefox is the only browser officially supported for |s|.  As an alternative,
-               you may try a current version of Chrome_, but note that you will need to
-               download a chrome-webdriver_.  For some combinations of versions of Chrome,
-               chrome-webdriver and selenium, timeouts didn't properly work.
-               For some medical journal sites with continuous stream advertising, Chrome would not
-               respond (would never return when called from scrape).
-
-
-.. _chrome-webdriver: https://code.google.com/p/chromedriver/
-
-.. _Chrome: http://www.google.com/chrome
 
