@@ -41,7 +41,7 @@ This should start |s| and open its documentation.
 
    - if you don't see ``scrape: INFO - ...registering plugins:`` in your |s| shell, then likely something is incomplete in your installation.  You can continue with the exercises, but you will need to install plugins when you need them.
 
-At the ``[S]crape >>>`` prompt type the following:;
+At the ``[S]crape >>>`` prompt type the following::
 
   [S]crape >>> help
 
@@ -51,7 +51,7 @@ into a *tree* of HTML *nodes*.
 You then traverse the tree of nodes,
 scraping the information you want from a selected node.
 
-|S| starts by setting the active node to the ``<body>`` of your HTML page[#]_.
+|S| starts by setting the active node to the ``<body>`` of your HTML page [#]_.
 
 Let's show the contents of the current node::
 
@@ -81,9 +81,8 @@ The variable does not need to exist (it will be created). ::
   [S]crape >>> table outline
   [S]crape >>> var topics
 
-Our table is called ``outline``.
 Should you decide to save the output, it will be saved in a file ``outline.csv``.
-So far, this table has one column - one variable - called ``topics``.
+So far, this table has one column - one variable.
 
 |S| starts by providing a simplified interface to the libxml2 library,
 so that most of the information you will find about ``xpath`` selectors
@@ -97,26 +96,25 @@ You may want to
 open http://www.w3schools.com/xpath/xpath_syntax.asp in another browser
 window for reference.
 
-Let's find the subheadings on our target page, and see if this
+Let's find the subheadings on our target page to see if this
 will satisfy our needs for a page outline::
 
   [S]crape >>> findall .//h2
   [S]crape >>> show node
 
 This should find all the ``<H2>`` nodes under the current node.
-More than one node is found.
-``Show`` displays all of them.
-|S| variables are lists of values.
+More than one node is found - ``show`` displays all of them.
 
 The text of these nodes seems like it would serve nicely as an outline, so lets capture those.
 To see what the various variables of a table currently have, we ``show out``,
-which shows the current table's contents.
+which shows pending output (the current table's contents).
 The form of the display is *YAML*.
+|S| variables are lists of values.
 Varible names are shown with a colon (``my_var:``),
-and their values are shown as a list of items, each preceded by a '-'.
+and their values are shown preceded by a '-'.
 
-The ``text`` command of |s| will collect the text contents of the currently
-selected ``HTML`` nodes;  the current variable will catch them.
+The ``text`` command will collect text contents of the currently
+selected ``HTML`` nodes into the current variable.
 ::
 
   [S]crape >>> show out
@@ -125,12 +123,11 @@ selected ``HTML`` nodes;  the current variable will catch them.
 
 
 There was no output pending prior to the ``text`` command.
-After, ``header`` contains a list of four strings.
 If you wanted to save this now, the ``table`` command (without a name)
 will output the current table name to a ``csv`` table (if one already exsits,
-it will not be overridden; the name will have a number added to it).
+it will not be overridden; the name will be numberically extended).
 
-If you wanted to continue to develop your script later, look
+If you wanted to continue extending your script later, look
 at your history.
 Only scrape commands which act on pages are saved to history.
 You can choose which parts of history you save.
@@ -142,7 +139,10 @@ You can choose which parts of history you save.
 If you'd like, you can save your script now.
 To exit |s|, see ``help EOF``.
 
-Now it's time to pick a tutorial track from the menu on the right.
+You can edit the scripts outside of |s| with a text editor.
+You can add comments, which begin with '#' and extend to the end of the line.
+
+Now might be a good time to select a more detailed tutorial.
 
 Have fun |is| ing!
 
