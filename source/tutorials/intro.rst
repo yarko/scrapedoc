@@ -59,7 +59,7 @@ You should see the source for the ``<body>`` of the |s| document page.
 The general starategy for using |s| is:
 
   - select a scrape target (a web page);
-  - declare a tablename (someplace to collect output);
+  - declare a table name (someplace to collect output);
   - declare a variable to collect information;
   - navigate the web page's tree;
   - capture the desired information;
@@ -70,14 +70,18 @@ The general starategy for using |s| is:
 Let's save the headers to develop an outline for this page.
 
 First, declare a table name and a variable to collect output.
-Setting ``var my_name`` will select a variable to collect data
-(a data catcher).
-The variable does not need to exist (it will be created). ::
+Setting ``var my_name`` will select a variable to collect data.
+The variable does not need to exist (it will be created).
+The same holds for a table.
+If you change tables before you've saved their output,
+they are stored so you can later add to their variables (and output).
+::
 
   [S]crape >>> table outline
   [S]crape >>> var topics
 
-Should you decide to save the output, it will be saved in a file ``outline.csv``.
+When you save the output from this table, it will be saved in a file ``outline.csv``.
+Once you save a table, its values are emptied.
 So far, this table has one column - one variable.
 
 One thing |s| does is provide a simplified interface to the libxml2 library,
