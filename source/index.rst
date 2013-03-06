@@ -21,8 +21,6 @@ You interactively develop a selection and extraction
 set of commands, and run them across a series of
 issues, generating output (JSON or CSV).
 
-Contents:
-=========
 
 
 .. toctree::
@@ -30,22 +28,23 @@ Contents:
 
    overview
    installation
-   tutorials/intro
+   tutorials/contents
    LICENSE
 
 
-:doc:`overview`
+:doc:`Overview <overview>`
+============================
    What's involved, required knowledge,  and the basic modes of operation.
 
-:doc:`installation`
+:doc:`Installation <installation>`
+===================================
+
    Software and browser requirements.
 
-:doc:`tutorials/intro`
-   Get started with a concrete examples (with exercises).
+:doc:`Tutorials <tutorials/contents>`
+=======================================
 
-
-:doc:`LICENSE`
-  This license applies to the program, |iS|, and its documentation.
+   Get started with a concrete examples.
 
 
 Alternatives
@@ -77,8 +76,14 @@ which, with a modicum of knowledge, is both powerful and simple.
 provided by extensions.
 
 
+:doc:`LICENSE`
+==============
+
+  This license applies to the program, |iS|, and its documentation.
+
+
 Work in Progress
-================
+=================
 
 This document is currently a work-in-progress.
 Here are a list of known items left to do:

@@ -11,7 +11,7 @@
  - a recent version of python_ 2.7
  - a recent version of Firefox_ [#browser]_
 
-Installing |s| will install or upgrade the following python:
+Installing |s| will install or upgrade the following python libraries:
 
  - argparse
  - lxml
@@ -24,8 +24,8 @@ Installation requires you have a compiler on your machine.
 
 For Linux systems, this should already be the case.
 
-For Macintosh OS/X systems, be sure you have downloaded Xcode,
-free from the `Mac App Store`_ (be sure to install the command line tools).
+For Macintosh OS/X systems, downloaded Xcode
+free from the `Mac App Store`_ (also install the command line tools).
 Alternatively, you may be able to install just the command-line tools
 (see https://github.com/kennethreitz/osx-gcc-installer - we have not tried this).
 
@@ -40,22 +40,32 @@ See the ``MS Windows`` section at http://lxml.de/installation.html.
 Installing |iSP|
 ----------------
 
-Be sure to have python_ 2.7 installed for your platform.
-Also, be sure you have installed a recent version of Firefox_.
+.. sidebar:: Prerequisites
+
+   - python_ 2.7
+   - a recent version of Firefox_
+
+   Recommended:
+
+   - virtualenv_
+   - pip
+
 
 .. _python: http://python.org/download/releases/
 
 .. _Firefox: http://www.mozilla.org/firefox
 
 
-I recommend you use python's  ``virtualenv``, particularly your first
+I suggest you use python's  ``virtualenv``, particularly your first
 time with |s|
-(see  https://pypi.python.org/pypi/virtualenv).
+(see  virtualenv_).
+
+.. _virtualenv: https://pypi.python.org/pypi/virtualenv
+
 This will ensure you have an isolated, clean python install
 of |s| to start.
-If all goes well, you can consider installing this to be always
-present in your system's python site-libraries.
-
+Once you have this working, you may consider installing this
+your system's python site-libraries.
 
 
 To properly use ``virtualenv``, you'll need ``pip``.
@@ -71,22 +81,20 @@ If you do have pip, be sure it's up-to-date::
 
   $ pip install --upgrade pip
 
-Now, install the current version of |s|::
-
-  $ pip install scrape-version.tar.gz
-
-(use the path where you've saved ``scrape.gz``).
-You can install directly from the web::
 
 
-  $ pip install http://someplace/scrape-vesion.tar.gz
+..  $ pip install http://someplace/scrape-vesion.tar.gz
 
 
 .. todo::
    Have yet to debug the scrape.gz install file (installation does not mirror setup.py).
 
 
-You can also install scrape from the sources (currently, the preferred method)::
+.. You can also install scrape from the sources (currently, the preferred method)::
+
+Now, install the current version of |s|.
+Currently, you must do this from sources.
+Clone a copy of |s| and run setup.py::
 
   $ hg clone ssh://hg@bitbucket.org/yarko/scrape
   $ cd scrape

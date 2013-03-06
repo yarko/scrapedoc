@@ -103,12 +103,13 @@ external commands through your system's shell.
 You can also add built-in commands
 by writing extensions in Python.
 
-Since |s| outputs tables [#tables]_, variable names are table column
-names.
-This means every variable is |s| a list (you can think of them as arrays).
+Since |s| outputs tables [#tables]_,
+variable names are table column names.
+This means every variable is |s| a list (you can think of them as arrays),
+and every table an associative array of variables.
 There are other important kinds of variables in |s|.
 
-:output: Output variables are the normal variables, and are used to
+:vars:   Output variables are the normal variables, and are used to
          specify output table column names.
 
 :local:  Local variables are similar to output variables, only they are omitted from tables.
@@ -121,26 +122,23 @@ There are other important kinds of variables in |s|.
 
 
 |SP| is least like shells in that there is no familiar loop control.
-For traversing an *HTML* tree and extracting data
-this simplifies use.
+This simplifies traversing an *HTML* tree and extracting data.
 Instead of looping, you set starting locations in the XPATH tree of the input.
-We call these XPATH locations *nodes*.
+We refer to these XPATH locations as *nodes*.
 Typical |s| operation involves traversing a document's HTML tree,
-extracting some content from a node,
-then continuing from the current location, or setting a new node as a starting point
-and extracting more.
+extracting some content from selected nodes,
+and repeating.
 In place of program control, you control which nodes you search from.
 Some general control mechanisms |s| provides are:
 
 :root:  Normally, navigation through the document is incremental.
-       This resets the current node to the start of the ``<html>`` tag.
+       This sets the root of the tree to the starting ``<html>`` tag.
 
-:body: This resets the current node to the start of the ``<body>`` tag.
+:body: This resets the root node to the ``<body>`` tag.
 
 :grab: |S| opens a browser when it starts, and communicates with it.
-       ``grab`` gets a highlited region from the page currently displayed
-       in your browser, and shows some context to help you write an XPATH
-       phrase to select this location, or similarly located nodes.
+       ``grab`` gets a highlited region from your browser,
+       giving you an ``xpath`` to it.
 
 A majority of |s| commands involve selecting a node
 using an xpath selector, a css-selector, or a combination of path and text search.
