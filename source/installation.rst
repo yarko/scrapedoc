@@ -40,20 +40,22 @@ See the ``MS Windows`` section at http://lxml.de/installation.html.
 Installing |iSP|
 ----------------
 
-.. sidebar:: Prerequisites
+.. sidebar:: Prerequisites:
 
    - python_ 2.7
    - a recent version of Firefox_
 
-   Recommended:
+   **Recommended:**
 
    - virtualenv_
-   - pip
+   - pip_
 
 
 .. _python: http://python.org/download/releases/
 
 .. _Firefox: http://www.mozilla.org/firefox
+
+.. _pip: http://www.pip-installer.org/
 
 
 I suggest you use python's  ``virtualenv``, particularly your first
