@@ -148,6 +148,8 @@ scripts, save or load scripts), and outputing results (tables).
 
 -----
 
+.. rubric:: Footnotes
+
 .. [#] |S| uses a Selenium_ Client Driver to run your browser.
        At this time |s| only supports Firefox.
 

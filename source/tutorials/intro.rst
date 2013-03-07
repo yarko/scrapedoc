@@ -255,6 +255,8 @@ Happy |is| ing!
 
 ----
 
+.. rubric:: Footnotes
+
 .. [#root] You can easily set to the root of the document at any time to either the entire document,
         or the body - see ``help doc`` and ``help body``.
 

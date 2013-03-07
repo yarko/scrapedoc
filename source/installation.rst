@@ -103,13 +103,13 @@ Clone a copy of |s| and run setup.py::
   $ python setup.py install
 
 
-
-----
-
 .. _chrome-webdriver: https://code.google.com/p/chromedriver/
 
 .. _Chrome: http://www.google.com/chrome
 
+----
+
+.. rubric:: Footnotes
 
 .. [#browser]  Firefox is the only browser officially supported for |s|.  As an alternative,
         you may try a current version of Chrome_, but note that you will need to
