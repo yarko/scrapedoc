@@ -58,15 +58,22 @@ Getting oriented with the source
 ---------------------------------
 
 Let's review what we've learned so far.
-|S| commands are divided into commands which
-navigate the source tree, and commands which
-capture content into variables.
-There are also commands to manipulate |s| variables,
-and to save collected content.
-There are also commands to inspect command history,
-and save commands as scripts, so you may later
-develop or run them.
+|S| commands are divided into commands which:
 
+ - navigate the source tree,
+   .. body
+   .. cssselect
+ - capture content into variables,
+   .. attrib
+   .. content (text_content)
+ - manipulate |s| variables,
+   .. clear
+ - save collected content,
+ - select and same scripts.
+
+.. other
+   EOF
+   base
 
 Finding objects of interest
 ----------------------------

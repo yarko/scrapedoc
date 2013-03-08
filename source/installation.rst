@@ -15,6 +15,7 @@ Installing |s| will install or upgrade the following python libraries:
 
  - argparse
  - lxml
+ - cssselect
  - PyYAML
  - selenium
  - |s|'s version of envoy

@@ -44,7 +44,7 @@ You operate |s| in one of two ways:
  - interactively;
  - batch;
 
-|SP| starts and controls a browser [#]_, and gets
+|SP| starts and opens targets through a browser [#]_, and gets
 it's data from that browser.
 
 You can interactively highlight sections
@@ -61,9 +61,15 @@ of commands from your history
 to develop your script.
 
 At anytime you can load and run
-scripts.  Thus you build up a complete
-script incrementally.  In batch mode, you can automatically
+scripts against an opened target.
+Thus you build up a complete
+script incrementally.
+In batch mode, you can automatically
 run it over a pattern or list of targets.
+
+You can test your scripts interactively in headless mode (that is, without a browser).
+You can also run batch either with a browser, or headless.
+
 
 Knowledge You Should Have
 -------------------------
@@ -101,12 +107,13 @@ Shells also provide variables, and some sort of program control.
 |SP| has a rich set of built-in commands, and allows callig
 external commands through your system's shell.
 You can also add built-in commands
-by writing extensions in Python.
+by writing extensions to |s| in Python (*plugins*).
 
 Since |s| outputs tables [#tables]_,
-variable names are table column names.
+variable names are like table column names.
 This means every variable is |s| a list (you can think of them as arrays),
 and every table an associative array of variables.
+In fact, you can save the result of your |s| as either ``csv``, ``json`` or ``yaml``.
 There are other important kinds of variables in |s|.
 
 :vars:   Output variables are the normal variables, and are used to
@@ -123,16 +130,21 @@ There are other important kinds of variables in |s|.
 
 |SP| is least like shells in that there is no familiar loop control.
 This simplifies traversing an *HTML* tree and extracting data.
-Instead of looping, you set starting locations in the XPATH tree of the input.
-We refer to these XPATH locations as *nodes*.
-Typical |s| operation involves traversing a document's HTML tree,
-extracting some content from selected nodes,
+Instead of looping, you traverse to locations in the XPATH tree of the input file.
+We refer to selected (current) XPATH locations as *nodes*.
+Typical |s| operation involves traversing a document's tree,
+extracting selected content from those nodes,
 and repeating.
 In place of program control, you control which nodes you search from.
+Multiple nodes can be active (for example all the list items of some part of the document),
+so scripts tend to be rather short.
 Some general control mechanisms |s| provides are:
 
 :root:  Normally, navigation through the document is incremental.
        This sets the root of the tree to the starting ``<html>`` tag.
+       When the root of the document tree is set, it's children are the
+       active children, so in this case, normally ``<head>`` and ``<body>``
+       tags will be *current* starting nodes.
 
 :body: This resets the root node to the ``<body>`` tag.
 
@@ -159,8 +171,7 @@ scripts, save or load scripts), and outputing results (tables).
              For one thing, to change the view of the data (the order of way the
              data is populated into columns, the number and contents of tables)
              one would need to re-scrape the source.
-             A better choice would have been saving variables in an intermediate form, such
-             as JSON.
-             Then, you could rebuild, re-shape your tables from your stored data source.
-             This may be a worthy modification for a future version.
+             This is why you have a choice of saving variables 
+             as JSON or YAML also.
+             Then, you could rebuild, re-shape your tables from your saved data source.
 
