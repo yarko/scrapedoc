@@ -36,7 +36,7 @@ for using scrape, as well as give an overview of some of the most useful command
 
 
 :doc:`Introduction to [S]crape <intro>`
---------------------------------------
+----------------------------------------
 
    The :doc:`"Getting Started" Tutorial <intro>`
    will help you confirm your installation, and
