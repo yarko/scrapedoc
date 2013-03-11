@@ -90,12 +90,12 @@ to review just the tags of the selected nodes::
 The general starategy for using |s| is:
 
   - select a scrape target (a web page);
-  - declare a table name (a named group of variables to collect output);
+  - declare a table name (which will hold a set of variables);
   - navigate the web page's tree;
   - declare a variable to collect information;
   - capture the desired information;
   - repeat as desired;
-  - save a table (a set of variables) to a file;
+  - save a table to a file;
   - lastly, save your interactive commands to a script to run later.
 
 When looking a |s| target,

@@ -14,26 +14,8 @@ Context
 |iSP| operates within the following environment:
 
 
-.. graphviz::
+.. graphviz:: context.dot
    :alt: [S]crape Context
-
-   digraph g {
-     graph [nodesep="0.7", margin="0.6,0.15"];
-     edge [dir="both"];
-     node [fontname="verdana", shape=box, fillcolor=snow, style="rounded,filled"];
-
-     subgraph {
-       rank = same; "[S]crape"; scripts; plugins;
-       "[S]crape" [fontname="Chalkduster"];
-     }
-     browser -> "[S]crape";
-     shell -> "[S]crape";
-
-     scripts -> "[S]crape";
-     "[S]crape" -> plugins [dir=back];
-
-     "[S]crape" -> output [dir=forward];
-   }
 
 
 Modes of Operation
