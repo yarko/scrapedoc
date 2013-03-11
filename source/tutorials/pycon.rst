@@ -451,6 +451,29 @@ by adding something like this to the bottom of your script::
 Summary
 =======
 
+After this exercise, your script should look similar::
+
+ ##  Count volunteer signups for PyCon Sessions
+ #
+ # open http://us.pycon.org/2013/schedule/sessions/
+ #
+ body
+ # I save to a different name than this table, which would be default;
+ [s_table]
+ find .//ul[@class='unstyled']
+ findall ./li
+ find ./a
+ <session>  # column1: the session name
+ text
+ getnext
+ find ./ul
+ <txt>     # column2: who's signed up to staff the session;
+ text_content
+ yaml sessions
+ !python session_volunteer_counter.py sessions.yaml
+
+
+
 Let's look at which
 commands in |s| we used:
 

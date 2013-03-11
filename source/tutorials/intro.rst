@@ -53,6 +53,7 @@ This should start |s| and open its documentation in Firefox [#fox]_.
       :width: 597px
       :height: 113px
       :scale: 75%
+      :align: center
 
 
 At the ``[S]crape >>>`` prompt type the following::
@@ -66,6 +67,7 @@ At the ``[S]crape >>>`` prompt type the following::
        :width: 767px
        :height: 369px
        :scale: 75%
+       :align: center
 
 
 
@@ -204,6 +206,7 @@ selected ``HTML`` nodes into the current variable.
        :width: 326px
        :height: 294px
        :scale: 75%
+       :align: center
 
 
 There was no output pending prior to the ``text`` command.
