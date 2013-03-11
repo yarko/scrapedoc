@@ -36,6 +36,9 @@ and run ``scrape``::
 This should start |s| and open its documentation in Firefox [#fox]_.
 
    .. image:: img1/webdriver.png
+      :width: 830px
+      :height: 417px
+      :scale: 85%
 
  - your Firefox should have "WebDriver" displayed in the lower-right;
 
@@ -47,6 +50,9 @@ This should start |s| and open its documentation in Firefox [#fox]_.
    - if you don't see ``scrape: INFO - ...registering plugins:`` in your |s| shell, then likely something is incomplete in your installation.  You can continue with the exercises, but you will need to install plugins when you need them.
 
    .. image:: img1/startup-prompt.png
+      :width: 597px
+      :height: 113px
+      :scale: 75%
 
 
 At the ``[S]crape >>>`` prompt type the following::
@@ -57,6 +63,9 @@ At the ``[S]crape >>>`` prompt type the following::
 ..
 
     .. image:: img1/help.png
+       :width: 767px
+       :height: 369px
+       :scale: 75%
 
 
 
@@ -113,6 +122,9 @@ The outline we'd like to make consists of the headers, ``Contents:``,  ``Alterna
 and so forth.  In your source window, search for ``Contents:``.
 
   .. image:: img1/h2.png
+     :width: 775px
+     :height: 620px
+     :scale: 85%
 
 
 ``Contents:`` is in an ``<h2>`` tag, as is ``Alternatives``;  this looks like a reasonable
@@ -140,6 +152,9 @@ This should find all the ``<H2>`` nodes under the current node.
 More than one node is found - ``show`` displays all of the currently selected nodes.
 
   .. image:: img1/showh2.png
+     :width: 940px
+     :height: 314px
+     :scale: 75%
 
 
 There are four active nodes, as verified by::
@@ -186,6 +201,9 @@ selected ``HTML`` nodes into the current variable.
 ..
 
     .. image:: img1/topics.png
+       :width: 326px
+       :height: 294px
+       :scale: 75%
 
 
 There was no output pending prior to the ``text`` command.
