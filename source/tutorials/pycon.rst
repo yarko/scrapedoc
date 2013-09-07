@@ -230,7 +230,7 @@ Here are the parts interesting for our task:
 Scrolling to the bottom of the browser page, we see there are 42 sessions.
 We can see that each session has a ``Session Chair`` and a ``Session Runner``.
 If no one has signed up, the page shows: ``No volunteers signed up``.
-We need a total of 82 volunteers.  We'll need to gather information
+We need a total of 84 volunteers.  We'll need to gather information
 after the session name (e.g. ``Session #1``).
 
 Unfortunately, there's a lot of ``HTML`` code for headers, sponsors,
