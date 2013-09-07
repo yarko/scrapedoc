@@ -86,7 +86,7 @@ In command interpreters, there are typically built-in commands
 and a way to execute external commands.
 Shells also provide variables, and some sort of program control.
 
-|SP| has a rich set of built-in commands, and allows callig
+|SP| has a rich set of built-in commands, and allows calling
 external commands through your system's shell.
 You can also add built-in commands
 by writing extensions to |s| in Python (*plugins*).
