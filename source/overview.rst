@@ -93,7 +93,7 @@ by writing extensions to |s| in Python (*plugins*).
 
 Since |s| outputs tables [#tables]_,
 variable names are like table column names.
-This means every variable is |s| a list (you can think of them as arrays),
+This means every variable in |s| is a list (you can think of them as arrays),
 and every table an associative array of variables.
 In fact, you can save the result of your |s| as either ``csv``, ``json`` or ``yaml``.
 There are other important kinds of variables in |s|.
