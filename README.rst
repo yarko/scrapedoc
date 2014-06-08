@@ -1,3 +1,6 @@
+.. image:: https://badge.waffle.io/yarko/scrapedoc.png?label=ready&title=Ready 
+ :target: https://waffle.io/yarko/scrapedoc
+ :alt: 'Stories in Ready'
 [S]crape
 ========
 
