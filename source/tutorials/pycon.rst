@@ -386,7 +386,7 @@ a *volunteer* variable.
  [S]crape >>> show out
 
 
-There is a good deal of *white space*, but well easily deal with that outside
+There is a good deal of *white space*, but we'll easily deal with that outside
 of scrape.
 I think the form of *show out* (yaml) would be easy to read into a python
 script which will do the counting.
@@ -417,7 +417,7 @@ so inspection commands are not stored there.
 
 You could edit your script file (comments start with ``'#'``),
 and eliminate any false starts, and test the edited result, or
-you cout select which part of your history to save, and go from there.
+you could select which part of your history to save, and go from there.
 You decide::
 
  [S]crape >>> help save
