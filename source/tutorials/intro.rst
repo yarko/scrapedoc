@@ -261,7 +261,7 @@ After our brief interactive session with |s|, here's what our script looks like:
 Summary
 '''''''
 
-In this introductory totorial, we've
+In this introductory tutorial, we've
 
  - shown one way to select nodes;
  - defined tables and variables;
