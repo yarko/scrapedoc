@@ -441,7 +441,7 @@ You can run your script in *headless* mode::
 I leave it to you to develop a script to count and report on volunteer needs,
 based on *sessions.yaml*.
 Mine was under 12 lines of python.
-Whateve you use for postprocessing, you can also run it from your *sessions.scrape*
+Whatever you use for postprocessing, you can also run it from your *sessions.scrape*
 by adding something like this to the bottom of your script::
 
   # after saving your yaml / json / csv file:
